@@ -11,11 +11,18 @@
   <div class='app-calendar' *ngIf="calendarVisible">
     <full-calendar
       #calendar
-      defaultView="dayGridMonth"
+      defaultView="timeGridFourDay"
+      [views]= "{
+        timeGridFourDay: {
+          type: 'timeGrid',
+          duration: { days: 4 },
+          buttonText: '4 day'
+        }
+      }"
       [header]="{
         left: 'prev,next today',
         center: 'title',
-        right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek'
+        right: 'tenDaysGrid, dayGridMonth,timeGridWeek,timeGridDay,listWeek'
       }"
       [plugins]="calendarPlugins"
       [weekends]="calendarWeekends"
