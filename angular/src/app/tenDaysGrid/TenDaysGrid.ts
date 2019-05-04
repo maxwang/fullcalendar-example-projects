@@ -8,4 +8,9 @@ export default class TenDaysGrid extends DayGrid {
     console.log('TenDaysGrid');
   }
 
+  render(props: DayGridProps) {
+    console.log('TenDaysGrid render');
+    super.render(props);
+  }
+
 }

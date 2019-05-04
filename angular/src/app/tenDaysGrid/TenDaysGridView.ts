@@ -27,7 +27,7 @@ export default class TenDaysGridView extends AbstractTenDaysGridView {
       );
     }
 
-    this.simpleDayGrid = new SimpleTenDaysGrid(this.context, this.dayGrid)
+    this.simpleDayGrid = new SimpleTenDaysGrid(this.context, this.tenDaysGrid);
   }
 
   destroy() {
